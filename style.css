@@ -1,0 +1,106 @@
+/* Global styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffe6f2;
+    color: #d5006d;
+    text-align: center;
+    padding: 50px;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+}
+
+h1 {
+    font-size: 3em;
+    animation: fadeIn 2s forwards;
+    color: #d5006d;
+}
+
+#ucapan-text {
+    font-size: 1.8em;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeInText 3s forwards;
+    color: #d5006d;
+    cursor: pointer;
+}
+
+/* Animasi Fade-In untuk judul dan ucapan */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeInText {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Animasi Hati yang jatuh */
+.falling-heart {
+    position: absolute;
+    font-size: 3em;
+    color: red;
+    animation: fallHeart 4s linear infinite;
+}
+
+@keyframes fallHeart {
+    0% {
+        top: -10%;
+        opacity: 1;
+    }
+    100% {
+        top: 100%;
+        opacity: 0;
+    }
+}
+
+/* Animasi Bunga yang jatuh */
+.falling-flower {
+    position: absolute;
+    font-size: 2em;
+    animation: fallFlower 5s linear infinite;
+}
+
+@keyframes fallFlower {
+    0% {
+        top: -5%;
+        opacity: 1;
+    }
+    100% {
+        top: 100%;
+        opacity: 0;
+    }
+}
+
+/* Efek Hati yang melayang */
+.floating-heart {
+    position: absolute;
+    font-size: 4em;
+    color: red;
+    animation: floatHeart 5s ease-in-out infinite;
+}
+
+@keyframes floatHeart {
+    0% {
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%) scale(1);
+    }
+    50% {
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%) scale(1.5);
+    }
+    100% {
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%) scale(1);
+    }
+}
+
+/* Hover effect pada ucapan */
+#ucapan-text:hover {
+    transform: rotate(5deg);
+    transition: transform 0.3s ease-in-out;
+}
